@@ -302,3 +302,18 @@ a:hover {
     font-size: 24px;
   }
 }
+
+/* Remove the .plus class and replace with this */
+.expand-icon {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-color);
+}
+
+.panel:checked ~ .panel-title .expand-icon {
+  transform: translateY(-50%) rotate(180deg);
+  color: var(--secondary-color);
+}
